@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "https://kunioshah.github.io/Pokedex/static/css/main.6573eb49.css",
-    "main.js": "https://kunioshah.github.io/Pokedex/static/js/main.104cadae.js",
-    "index.html": "https://kunioshah.github.io/Pokedex/index.html",
-    "main.6573eb49.css.map": "https://kunioshah.github.io/Pokedex/static/css/main.6573eb49.css.map",
-    "main.104cadae.js.map": "https://kunioshah.github.io/Pokedex/static/js/main.104cadae.js.map"
+    "main.css": "/static/css/main.6573eb49.css",
+    "main.js": "/static/js/main.104cadae.js",
+    "index.html": "/index.html",
+    "main.6573eb49.css.map": "/static/css/main.6573eb49.css.map",
+    "main.104cadae.js.map": "/static/js/main.104cadae.js.map"
   },
   "entrypoints": [
     "static/css/main.6573eb49.css",
