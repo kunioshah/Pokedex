@@ -30,58 +30,69 @@ function NewList() {
   };
 
   return (
-    <InfiniteScroll
-      style={{ margin: "10px" }}
-      dataLength={items.length}
-      pageStart={0}
-      next={fetchData}
-      hasMore={true}
-      loader={
-        <div className="loader" key={0}>
-          Loading ...
-        </div>
-      }
-    >
-      {arrayChunk(items, 3).map((row, rowIndex) => {
-        var top = rowIndex * 100;
-        return (
-          <>
-            {row.map((col, colIndex) => {
-              var spriteNumberWithSlash = col.url.slice(34);
-              var spriteNumber = spriteNumberWithSlash.replace(/.$/, "");
-              var width = colIndex * 440;
-              return (
-                <>
-                  <div
-                    class="col-lg-4 col-md-6 artwork-item isotope-item filter-app"
-                    style={{
-                      position: "absolute",
-                      left: width + "px",
-                      top: top + "px",
-                    }}
-                  >
-                    <div class="artwork-content h-100">
-                      <Link to={"/pokemon/" + spriteNumber}>
-                        <Button>
-                          <img
-                            src={
-                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-                              spriteNumber +
-                              ".png"
-                            }
-                          ></img>
-                          {col.name}
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
-          </>
-        );
-      })}
-    </InfiniteScroll>
+    <>
+      <h3>Click on a Pokemon to see it's details. </h3>
+      <br />
+      <div
+        class="row gy-4 isotope-container aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        style={{ position: "absolute" }}
+      >
+        <InfiniteScroll
+          style={{ margin: "10px" }}
+          dataLength={items.length}
+          pageStart={0}
+          next={fetchData}
+          hasMore={true}
+          loader={
+            <div className="loader" key={0}>
+              Loading ...
+            </div>
+          }
+        >
+          {arrayChunk(items, 3).map((row, rowIndex) => {
+            var top = rowIndex * 100;
+            return (
+              <>
+                {row.map((col, colIndex) => {
+                  var spriteNumberWithSlash = col.url.slice(34);
+                  var spriteNumber = spriteNumberWithSlash.replace(/.$/, "");
+                  var width = colIndex * 440;
+                  return (
+                    <>
+                      <div
+                        class="col-lg-4 col-md-6 artwork-item isotope-item filter-app"
+                        style={{
+                          position: "absolute",
+                          left: width + "px",
+                          top: top + "px",
+                        }}
+                      >
+                        <div class="artwork-content h-100">
+                          <Link to={"/pokemon/" + spriteNumber}>
+                            <Button>
+                              <img
+                                src={
+                                  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+                                  spriteNumber +
+                                  ".png"
+                                }
+                              ></img>
+                              {col.name}
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })}
+              </>
+            );
+          })}
+        </InfiniteScroll>
+      </div>
+    </>
   );
 }
 
