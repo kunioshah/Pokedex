@@ -43,7 +43,7 @@ function NewList() {
       }
     >
       {arrayChunk(items, 3).map((row, rowIndex) => {
-        var top = rowIndex * 150;
+        var top = rowIndex * 100;
         return (
           <>
             {row.map((col, colIndex) => {

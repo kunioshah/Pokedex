@@ -72,12 +72,31 @@
   </header>
 
   <main class="main">
-    <br />
-    <center>
-      <h1 style="color: rgb(26, 75, 159); font-size: 50px; align-self: auto;">POKEDEX</h1>
-    </center>
-    <br />
-    <div id="root"></div>
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Pokedex</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Pokedex</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <section id="games" class="games section">
+
+
+      <div class="container">
+        <p>Click on a Pokemon to see it's details. </p>
+        <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
+          style="position : absolute">
+
+          <div id="root"></div>
+
+        </div>
+      </div>
+    </section>
   </main>
 
 
